@@ -2,7 +2,7 @@
 <body>
   <h1 id='title' class='headings'>Hello World</h1>
 <h2 id='subtitle' class='headings'>This is my first HTML</h2>
-<a href="https://youtube.com">youtube</a> 
+<a href="https://youtube.com" id="youtube" class="links">youtube</a> 
 <!--Remember to always use "let" or "const" when making a variable never use "var" unless needed. Arrays/lists are used to make a set of multiple values i can access them by doing this "list = ["apple","bannana","grapes"]" -->
 
 
@@ -12,6 +12,8 @@
 <script>
     const title = document.getElementById('title')
       const headings = document.getElementsByClassName('headings')
+      const youtube = document.getElementById('youtube')
+      const links = document.getElementsByClassName('links')
       const a = Number(1)
       const b = Number(2)
       const c = a*a+b*b
