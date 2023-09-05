@@ -2,8 +2,13 @@
 <button id = "press-me-you-fool" class = "buttons">Press me you fool</button>
 
 <script>
-PressMeYouFool.addEventListener('click',() => {
+    const PressMeYouFool = document.getElementById('press-me-you-fool')
+    const buttons = document.getElementsByClassName('buttons')
+PressMeYouFool.addEventListener('mouseenter',() => {
         console.log('yes')
       })
+PressMeYouFool.addEventListener('mouseleave', () => {
+        console.log('no')
+})
 </script>
 </body>
