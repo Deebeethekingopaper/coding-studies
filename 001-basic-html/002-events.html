@@ -5,14 +5,16 @@
         let al = 0
     const PressMeYouFool = document.getElementById('press-me-you-fool')
     const buttons = document.getElementsByClassName('buttons')
-PressMeYouFool.addEventListener('mouseenter',() => {
+PressMeYouFool.addEventListener('click',() => {
         console.log('yes')
-        al + 1
+        al = al + 1
         alert(al) 
       })
 PressMeYouFool.addEventListener('mouseleave', () => {
-        console.log('no')
-        alert()
+        console.log('the mouse is off')
 })
+if (al = 20) {
+        alert("Stop clicking already, its annoying!")
+}
 </script>
 </body>
