@@ -9,13 +9,14 @@
 PressMeYouFool.addEventListener('click',() => {
         console.log('yes')
         al = al + 1
-        alert(al) 
+
+        if (al == 20)
+         {
+                alert("Stop clicking already, its annoying!") 
+        } 
       })
 PressMeYouFool.addEventListener('mouseleave', () => {
         console.log('the mouse is off')
 })
-if (al == 20) {
-        alert("Stop clicking already, its annoying!")
-}
 </script>
 </body>
