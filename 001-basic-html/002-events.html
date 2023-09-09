@@ -1,7 +1,8 @@
 <body>
 <button id = "press-me-you-fool" class = "buttons">Press me you fool</button>
-
+<div id = 'output'></div>
 <script>
+        const divTag = document.getElementById('output')
         let pal = 0
         let al = 0
     const PressMeYouFool = document.getElementById('press-me-you-fool')
@@ -12,7 +13,7 @@ PressMeYouFool.addEventListener('click',() => {
 
         if (al == 20)
          {
-                alert("Stop clicking already, its annoying!") 
+                divTag.innerText("Stop clicking already, its annoying!") 
         } 
       })
 PressMeYouFool.addEventListener('mouseleave', () => {
