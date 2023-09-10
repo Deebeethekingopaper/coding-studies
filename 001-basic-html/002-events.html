@@ -19,8 +19,10 @@ PressMeYouFool.addEventListener('click',() => {
          {
                 divTag.innerText = 'STOP PRESSING ME ITS ANNOYING!!!!!!!!!!!'
                 divTag.style.color = 'red'
-                button2 = 'Ok'
-                button3 = 'No noob L bozo'
+                if (divTag.innerText == 'STOP PRESSING ME ITS ANNOYING!!!!!!!!!!!') {
+                        button2 = 'Ok'
+                        button3 = 'No noob L bozo'
+                }
                 PressMeYouFool.innerText = 'You probably shouldnt click me anoymore...yo'
                 button3.addEventListener('click',() => {
                         divTag.innerText('I warned you kid.')
