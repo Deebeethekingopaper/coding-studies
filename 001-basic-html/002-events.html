@@ -1,8 +1,12 @@
 <body>
-<button id = "press-me-you-fool" class = "buttons">Press me you fool</button>
+<button id = 'press-me-you-fool' class = 'buttons'>Click me yo</button>
+<button id = 'button3'></button>
 <div id = 'output'></div>
+<button id = 'button2' class = 'buttons'></button>
 <script>
         const divTag = document.getElementById('output')
+        const button2 = document.getElementById('button2')
+        const button3 = document.getElementById('button3')
         let pal = 0
         let al = 0
     const PressMeYouFool = document.getElementById('press-me-you-fool')
@@ -14,10 +18,19 @@ PressMeYouFool.addEventListener('click',() => {
         if (al == 5)
          {
                 divTag.innerText = 'STOP PRESSING ME ITS ANNOYING!!!!!!!!!!!'
+                divTag.style.color = 'red'
+                button2 = 'Ok'
+                button3 = 'No noob L bozo'
+                PressMeYouFool.innerText = 'You probably shouldnt click me anoymore...yo'
+                button3.addEventListener('click',() => {
+                        divTag.innerText('I warned you kid.')
+                        PressMeYouFool.innerText('yeah your dead')
+
+                })
+
         } 
+
       })
-PressMeYouFool.addEventListener('mouseleave', () => {
-        console.log('the mouse is off')
-})
+
 </script>
 </body>
