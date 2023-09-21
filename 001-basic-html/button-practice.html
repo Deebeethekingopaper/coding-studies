@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Button Practice</title>
+
+
+
+</head>
+
+<body>
+<button onclick='SayRandomWord()'>SayHi</button>
+<div id = 'divTag'></div>
+
+</body>
+<script>
+    const divTag = document.getElementById('divTag')
+    let i = -1
+    array = ['alert','help','me','please']
+function SayRandomWord() {
+    i++
+    divTag.innerText = array[i]
+}
+
+</script>
+
+</html>
