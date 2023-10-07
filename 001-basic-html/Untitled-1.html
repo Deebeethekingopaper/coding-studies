@@ -1,0 +1,17 @@
+<html>
+<body>
+    <h1 id = "h1"></h1>
+    <button onclick="press_function()">PressForDate</button>
+    <button onclick="close_function()">CloseDate</button>
+</body>
+<script>
+    function press_function() {
+     const h1 =  document.getElementById("h1")
+     h1.innerHTML = Date()
+    }
+    function close_function() {
+        const h1 =  document.getElementById("h1")
+        h1.innerText = ""
+    }
+</script>
+</html>
