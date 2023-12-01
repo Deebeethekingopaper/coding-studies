@@ -16,197 +16,60 @@
 <html>
 
 <body>
-<button class="button" id = "Number2-9" data-value="0">0</button>
-<button class = "button" id = "Number1-1" data-value="1">1</button>
-<button class = "button" id = "Number1-2" data-value="2">2</button>
-<button class="button" id = "Number1-3" data-value="3">3</button>
-<button class="button" id = "Number1-4" data-value="4">4</button>
-<button class="button" id = "Number1-5" data-value="5">5</button>
-<button class="button" id = "Number1-6" data-value="6">6</button>
-<button class="button" id = "Number1-7" data-value="7">7</button>
-<button class="button" id = "Number1-8" data-value="8">8</button>
-<button class="button" id = "Number1-9" data-value="9">9</button>
-<button class="button" id = "Number2-9" data-value="0">0</button>
-<button class = "button" id = "Number2-1" data-value="1">1</button>
-<button class = "button" id = "Number2-2" data-value="2">2</button>
-<button class="button" id = "Number2-3" data-value="3">3</button>
-<button class="button" id = "Number2-4" data-value="4">4</button>
-<button class="button" id = "Number2-5" data-value="5">5</button>
-<button class="button" id = "Number2-6" data-value="6">6</button>
-<button class="button" id = "Number2-7" data-value="7">7</button>
-<button class="button" id = "Number2-8" data-value="8">8</button>
-<button class="button" id = "Number2-9" data-value="9">9</button>
+<button class="button-1" id = "Number2-9" data-value="0">0</button>
+<button class = "button-1" id = "Number1-1" data-value="1">1</button>
+<button class = "button-1" id = "Number1-2" data-value="2">2</button>
+<button class="button-1" id = "Number1-3" data-value="3">3</button>
+<button class="button-1" id = "Number1-4" data-value="4">4</button>
+<button class="button-1" id = "Number1-5" data-value="5">5</button>
+<button class="button-1" id = "Number1-6" data-value="6">6</button>
+<button class="button-1" id = "Number1-7" data-value="7">7</button>
+<button class="button-1" id = "Number1-8" data-value="8">8</button>
+<button class="button-1" id = "Number1-9" data-value="9">9</button>
+<button class="button-1" id = "Number2-9" data-value="0">0</button>
+<button class = "button-2" id = "Number2-1" data-value="1">1</button>
+<button class = "button-2" id = "Number2-2" data-value="2">2</button>
+<button class="button-2" id = "Number2-3" data-value="3">3</button>
+<button class="button-2" id = "Number2-4" data-value="4">4</button>
+<button class="button-2" id = "Number2-5" data-value="5">5</button>
+<button class="button-2" id = "Number2-6" data-value="6">6</button>
+<button class="button-2" id = "Number2-7" data-value="7">7</button>
+<button class="button-2" id = "Number2-8" data-value="8">8</button>
+<button class="button-2" id = "Number2-9" data-value="9">9</button>
 
 <button id = "clear" onclick="Clear()">Clear</button>
-<button onclick="ClickForAnswer()">ClickForAnswer</button>
+<button onclick="ClickForAnswer()" id = 'ClickForAnswer'>ClickForAnswer</button>
 <header><div id = "Number1" class="Equation">Number1</div><div id = "Symbol" class="Equation">-</div><div id = "Number2" class="Equation" >Number2</div><div id="Quotiant" class="Equation">Quotiant</div></header>
 </body>
 </html>
 <script>
-function ZeroOfFirst() {
-    const Number1 = document.getElementById("Number1")
-    Number1.innerText = 0
+
+const firstButtons = document.getElementsByClassName('button-1')
+
+for (let i = 0; i < firstButtons.length; i++) {
+const Number1 = document.getElementById('Number1')
+    
+  firstButtons[i].addEventListener('click', () => {
+    const value = firstButtons[i].getAttribute('data-value')
+    Number1.innerText = value
+  })
 }
-function ZeroOfSecond() {
-    const Number2 = document.getElementById("Number2")
-    Number2.innerText = 0
+const SecondButtons = document.getElementsByClassName('button-2')
+
+for (let i = 0; i < SecondButtons.length; i++) {
+const Number2 = document.getElementById('Number2')
+  SecondButtons[i].addEventListener('click', () => {
+    const value = SecondButtons[i].getAttribute('data-value')
+    Number2.innerText = value
+  })
 }
-function First() {
-    const Number1 = document.getElementById("Number1")
-    Number1.innerText = 1
-}
-function Second() {
-    const Number1 = document.getElementById("Number1")
-    Number1.innerText = 2
-}
-function Third() {
-    const Number1 = document.getElementById("Number1")
-    Number1.innerText = 3
-}
-function Fourth() {
-    const Number1 = document.getElementById("Number1")
-    Number1.innerText = 4
-}
-function Fifth() {
-    const Number1 = document.getElementById("Number1")
-    Number1.innerText = 5
-}
-function Sixth() {
-    const Number1 = document.getElementById("Number1")
-    Number1.innerText = 6
-}
-function Seventh() {
-    const Number1 = document.getElementById("Number1")
-    Number1.innerText = 7
-}
-function Eigth() {
-    const Number1 = document.getElementById("Number1")
-    Number1.innerText = 8
-}
-function Ninth() {
-    const Number1 = document.getElementById("Number1")
-    Number1.innerText = 9
-}
-function Plus() {
-    const Symbol = document.getElementById("Symbol")
-    Symbol.innerHTML = "+"
-}
-function Minus() {
-    const Symbol = document.getElementById("Symbol")
-    Symbol.innerHTML = "-"
-}
-function SecondOfFirst() {
-    const Number2 = document.getElementById("Number2")
-    Number2.innerText = 1
-}
-function SecondOfSecond() {
-    const Number2 = document.getElementById("Number2")
-    Number2.innerText = 2
-}
-function SecondOfThird() {
-    const Number2 = document.getElementById("Number2")
-    Number2.innerText = 3
-}
-function SecondOfFourth() {
-    const Number2 = document.getElementById("Number2")
-    Number2.innerText = 4
-}
-function SecondOfFifth() {
-    const Number2 = document.getElementById("Number2")
-    Number2.innerText = 5
-}
-function SecondOfSixth() {
-    const Number2 = document.getElementById("Number2")
-    Number2.innerText = 6
-}
-function SecondOfSeventh() {
-    const Number2 = document.getElementById("Number2")
-    Number2.innerText = 7
-}
-function SecondOfEight() {
-    const Number2 = document.getElementById("Number2")
-    Number2.innerText = 8
-}
-function SecondOfNinth() {
-    const Number2 = document.getElementById("Number2")
-    Number2.innerText = 9
-}
-function Clear() {
-    const Symbol = document.getElementById("Symbol")
-    const Number1 = document.getElementById("Number1")
-    const Number2 = document.getElementById("Number2")
-    const Quotiant = document.getElementById("Quotiant")
-    Number1.innerText = "Number1"
-    Number2.innerText = "Number2"
-    Quotiant.innerText = "Quotiant"
-}
+
 function ClickForAnswer() {
-    const Symbol = document.getElementById("Symbol")
-    const Number1 = document.getElementById("Number1")
-    const Number2 = document.getElementById("Number2")
-    const Quotiant = document.getElementById("Quotiant")
-    let Number101 = 0
-    let Number202 = 0
-    if (Number1.innerText == 0) {
-        Number101 = 0
-    }
-    if (Number2.innerText == 0) {
-        Number202 = 0
-    }
-    if (Number1.innerText == 1) {
-        Number101 = 1
-    }
-    if (Number2.innerText == 1) {
-        Number202 = 1
-    }
-    if (Number1.innerText == 2) {
-        Number101 = 2
-    }
-    if (Number2.innerText == 2) {
-        Number202 = 2
-    }
-    if (Number1.innerText == 3) {
-        Number101 = 3
-    }
-    if (Number2.innerText == 3) {
-        Number202 = 3
-    }
-    if (Number1.innerText == 4) {
-        Number101 = 4
-    }
-    if (Number2.innerText == 4) {
-        Number202 = 4
-    }
-    if (Number1.innerText == 5) {
-        Number101 = 5
-    }
-    if (Number2.innerText == 5) {
-        Number202 = 5
-    }
-    if (Number1.innerText == 6) {
-        Number101 = 6
-    }
-    if (Number2.innerText == 6) {
-        Number202 = 6
-    }
-    if (Number1.innerText == 7) {
-        Number101 = 7
-    }
-    if (Number2.innerText == 7) {
-        Number202 = 7
-    }
-    if (Number1.innerText == 8) {
-        Number101 = 8
-    }
-    if (Number2.innerText == 8) {
-        Number202 = 8
-    }
-    if (Number1.innerText == 9) {
-        Number101 = 9
-    }
-    if (Number2.innerText == 9) {
-        Number202 = 9
-    }
-    Quotiant.innerText = Number101-Number202
+    const Number1 = document.getElementById('Number1')
+    const Number2 = document.getElementById('Number2')
+    const Quotiant = document.getElementById('Quotiant')
+    Quotiant.innerText = Number1.innerText + Number2.innerText
+     
 }
+
 </script> 
